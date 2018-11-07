@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-querybuilder",
+  "version": "1.0.0",
+  "author": "Onur Özkır (onurozkir@hotmail.com)",
+  "main": "index.js",
+  "description": "NodeJS SQL query builder",
+  "keywords": [
+    "sql",
+    "query"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onurozkir/nodejs-oqb"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "mocha --exit --check-leaks -t 10000 -R spec test/mysql/*.js"
+  },
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.1",
+    "chai": "~1.4.2",
+    "mocha": "*"
+  }
+}
