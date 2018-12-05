@@ -1,4 +1,4 @@
-const Oqb = (settings) => {
+function Oqb(settings) {
     this.settings = Object.assign({}, settings);
     this.settings.client = settings.client || 'mysql';
     this.settings.connection.driver_version = settings.connection.driver_version || 'default';
@@ -16,13 +16,11 @@ const Oqb = (settings) => {
 
 
     const adapter = (oqb) => {
-        const Adapters = require('./driver/' + oqb.settings.client + '/index.js');
-        return Adapters();
+        return require('./driver/' + oqb.settings.client + '/index.js')();
     };
 
     return adapter(this);
-
-};
+}
 
 
 module.exports = Oqb;
